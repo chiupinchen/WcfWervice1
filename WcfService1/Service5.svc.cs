@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.Serialization;
+using System.ServiceModel;
+using System.Text;
+
+namespace WcfService1
+{
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "Service5" in code, svc and config file together.
+    // NOTE: In order to launch WCF Test Client for testing this service, please select Service5.svc or Service5.svc.cs at the Solution Explorer and start debugging.
+   
+    public class Service5 : IService5
+    {
+        
+        public void DoWork(string inputString)
+        {
+            IService5CallBack callProxy = OperationContext.Current.GetCallbackChannel<IService5CallBack>();
+            
+            
+
+            callProxy.OnCallBack(inputString);
+
+            inputString = inputString + DateTime.Now.ToString();
+
+        }
+    }
+
+    
+}

@@ -1,0 +1,9 @@
+c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\AsyncFormTest\obj\Debug\AsyncFormTest.Properties.Resources.resources
+c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\AsyncFormTest\obj\Debug\AsyncFormTest.csproj.GenerateResource.Cache
+c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\AsyncFormTest\bin\Debug\AsyncFormTest.exe.config
+c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\AsyncFormTest\bin\Debug\AsyncFormTest.exe
+c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\AsyncFormTest\bin\Debug\AsyncFormTest.pdb
+c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\AsyncFormTest\obj\Debug\AsyncFormTest.exe
+c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\AsyncFormTest\obj\Debug\AsyncFormTest.pdb
+c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\AsyncFormTest\obj\Debug\AsyncFormTest.csprojResolveAssemblyReference.cache
+c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\AsyncFormTest\obj\Debug\AsyncFormTest.Foo1.resources

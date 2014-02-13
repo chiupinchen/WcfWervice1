@@ -1,0 +1,8 @@
+c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\SelfHostConsole\bin\Debug\SelfHostConsole.exe.config
+c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\SelfHostConsole\bin\Debug\SelfHostConsole.exe
+c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\SelfHostConsole\bin\Debug\SelfHostConsole.pdb
+c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\SelfHostConsole\bin\Debug\WcfService1.dll
+c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\SelfHostConsole\bin\Debug\WcfService1.pdb
+c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\SelfHostConsole\obj\Debug\SelfHostConsole.csprojResolveAssemblyReference.cache
+c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\SelfHostConsole\obj\Debug\SelfHostConsole.exe
+c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\SelfHostConsole\obj\Debug\SelfHostConsole.pdb
