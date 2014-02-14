@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelfHostConsole", "SelfHost
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncFormTest", "AsyncFormTest\AsyncFormTest.csproj", "{20C11C81-F99B-4928-B0D6-636AF8A28D02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoqTest", "MoqTest\MoqTest.csproj", "{75427725-E0A8-40B5-B5A3-26DB9DA31CEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{20C11C81-F99B-4928-B0D6-636AF8A28D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20C11C81-F99B-4928-B0D6-636AF8A28D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20C11C81-F99B-4928-B0D6-636AF8A28D02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75427725-E0A8-40B5-B5A3-26DB9DA31CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75427725-E0A8-40B5-B5A3-26DB9DA31CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75427725-E0A8-40B5-B5A3-26DB9DA31CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75427725-E0A8-40B5-B5A3-26DB9DA31CEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

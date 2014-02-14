@@ -12,7 +12,13 @@ using System.Windows.Forms;
 
 namespace AsyncFormTest
 {
+    public class ToTest
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
 
+  
     class Foo1
     { }
     
@@ -49,9 +55,12 @@ namespace AsyncFormTest
         }
         public Form1()
         {
-            new Derived("a");
-            var foo1 = Activator.CreateInstance(typeof(Foo), "a");
-            var foo2 = Activator.CreateInstance("AsyncFormTest", "AsyncFormTest.Foo1");
+            //new Derived("a");
+            //var foo1 = Activator.CreateInstance(typeof(Foo), "a");
+            //var foo2 = Activator.CreateInstance("AsyncFormTest", "AsyncFormTest.Foo1");
+
+
+
             InitializeComponent();
             
         }
