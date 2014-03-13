@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="core" Class="CoreDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=CI1220\SQL2012;Initial Catalog=core;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="coreConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Person" Member="Persons">
+    <Type Name="Person">
+      <Column Name="PersonID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="MiddleName" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Suffix" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="CellPhone" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="PrimaryEmail" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Column Name="SecondaryEmail" Type="System.String" DbType="VarChar(256)" CanBeNull="true" />
+      <Column Name="OfficePhone" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="PersonTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="HomePhone" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="DateOfBirth" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PersonGUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="PrimaryIdentifier" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="PreferredLanguage" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Association Name="Person_PersonAddress" Member="PersonAddresses" ThisKey="PersonID" OtherKey="PersonID" Type="PersonAddress" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PersonAddress" Member="PersonAddresses">
+    <Type Name="PersonAddress">
+      <Column Name="PersonAddressID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PersonID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AddressID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LastSynchDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Person_PersonAddress" Member="Person" ThisKey="PersonID" OtherKey="PersonID" Type="Person" IsForeignKey="true" />
+      <Association Name="Address_PersonAddress" Member="Address" ThisKey="AddressID" OtherKey="AddressID" Type="Address" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Address" Member="Addresses">
+    <Type Name="Address">
+      <Column Name="AddressID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AddressLine1" Type="System.String" DbType="VarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="AddressLine2" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="CityTown" Type="System.String" DbType="VarChar(128)" CanBeNull="true" />
+      <Column Name="PostalCode" Type="System.String" DbType="VarChar(32)" CanBeNull="true" />
+      <Column Name="CountryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StateProvinceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Latitude" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Longitude" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AddressTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AddressGUID" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Association Name="Address_PersonAddress" Member="PersonAddresses" ThisKey="AddressID" OtherKey="AddressID" Type="PersonAddress" />
+      <Association Name="AddressType_Address" Member="AddressType" ThisKey="AddressTypeID" OtherKey="AddressTypeID" Type="AddressType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AddressType" Member="AddressTypes">
+    <Type Name="AddressType">
+      <Column Name="AddressTypeID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DisplayName" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Association Name="AddressType_Address" Member="Addresses" ThisKey="AddressTypeID" OtherKey="AddressTypeID" Type="Address" />
+    </Type>
+  </Table>
+</Database>

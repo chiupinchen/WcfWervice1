@@ -16,6 +16,25 @@ namespace WebClient
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //EditClicked += (s, e) => { s.GetType(); };
+
+            //EditClicked(this, new EventArgs());
+
+            //MyDelegate p = (s,e)=>{s.GetType(); return 1;};
+
+            //p(null,null);
         }
+
+        
+        //void MvcApplication_EditClicked(object sender, EventArgs e)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //event EventHandler EditClicked;
+
+        //public delegate int MyDelegate(object sender, EventArgs e);
+
     }
 }

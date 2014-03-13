@@ -50,6 +50,9 @@
     <Compile Include="CommandPattern.cs" />
     <Compile Include="CompositePattern.cs" />
     <Compile Include="DecoratorPattern.cs" />
+    <Compile Include="DelegateAndAnonymousMethod\Class1.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ExtensionMethods\Market.cs" />
     <Compile Include="FlyWeightPattern.cs" />
     <Compile Include="Form1.cs">

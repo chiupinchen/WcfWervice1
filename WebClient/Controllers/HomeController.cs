@@ -35,6 +35,12 @@ namespace WebClient.Controllers
     }
     public class HomeController : Controller
     {
+        [ValidateInput(false)]
+        public ActionResult Test()
+        {
+            return View();
+
+        }
         public ActionResult Index()
         {
 

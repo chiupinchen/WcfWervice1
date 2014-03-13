@@ -52,4 +52,3 @@ c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\WebClient\bin\M
 c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\WebClient\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\WebClient\obj\Debug\WebClient.dll
 c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\WebClient\obj\Debug\WebClient.pdb
-c:\Users\cchen\Documents\Visual Studio 2013\Projects\WcfService1\WebClient\obj\Debug\WebClient.csprojResolveAssemblyReference.cache

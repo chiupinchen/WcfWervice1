@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +13,107 @@ using System.Windows.Forms;
 
 namespace AsyncFormTest
 {
+    abstract class MyAbstractClass
+    {
+
+        public void Calc() { }
+
+        public abstract void Calc2();
+
+    }
+
+  
+
+    public static class StringToolExtension
+    { 
+        public static string Reverse(this string s)
+        {
+            if (s == null)
+            {
+                return null;
+            }
+            
+            char[] array = s.ToCharArray();
+            Array.Reverse(array);
+            return new String(array);
+        }
+    }
+
     public class ToTest
     {
         public int Id { get; set; }
         public string Name { get; set; }
+
+        public string Reverse(string s)
+        {
+            if (s == null)
+            {
+                return null;
+            }
+
+            char[] charArray = s.ToCharArray();
+            Array.Reverse(charArray);
+            return new String(charArray);
+
+        }
+
+        public string Reverse2(string s)
+        {
+            if (s == null)
+            {
+                return null;
+            }
+
+            StringBuilder sb = new StringBuilder(s.Length);
+            
+            for (int i = s.Length - 1; i >= 0; i--)
+            {
+                sb.Append(s[i]);
+            }
+
+            return sb.ToString();
+        }
+
+        public void FindPrimeNumber(long a)
+        {
+            if (a < 2)
+            {
+                return;
+            }
+            for (long i = 2; i <= a; i++)
+            {
+                bool isPrime = true;
+                double boundary = Math.Floor(Math.Sqrt(i));
+
+                for (long j = 2; j <= boundary; j++)
+                {
+                    if (i % j == 0)
+                    {
+                        isPrime = false;
+                        //not prime number
+                        break;
+                    }
+                }
+
+                if (isPrime) 
+                {
+                    Console.WriteLine(i.ToString());
+                }
+            }
+            
+        }
+        public bool isPrime(int number)
+        {
+            var boundary = Math.Floor(Math.Sqrt(number));
+            return false;
+        }
+
+        
     }
 
-  
     class Foo1
     { }
-    
-  
+
     public partial class Form1 : Form
     {
         
@@ -55,14 +146,39 @@ namespace AsyncFormTest
         }
         public Form1()
         {
-            //new Derived("a");
+            var ttt = "abc".Reverse();
+
+            var y = (9 - 1) / 2;
+            var t = new ToTest();
+            var result1 = t.Reverse("abcdef");
+            var result2 = t.Reverse2("abcdef");
+            t.FindPrimeNumber(1);
+
+            t.FindPrimeNumber(10);
+            t.isPrime(25);
+            new Derived("a");
             //var foo1 = Activator.CreateInstance(typeof(Foo), "a");
             //var foo2 = Activator.CreateInstance("AsyncFormTest", "AsyncFormTest.Foo1");
 
-
+            method1();
 
             InitializeComponent();
             
+        }
+
+        event Action<string> p;
+
+
+
+        public void method1()
+        {
+            p += (a1 => { a1.ToString(); });
+            p += (a2 => { a2.IndexOf("a"); });
+
+            if (p != null)
+            {
+                p.Invoke("abc");
+            }
         }
 
         private async void button1_Click(object sender, EventArgs e)
